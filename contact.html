@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Debt Free Path for free, confidential debt advice. Speak to a UK-based specialist by phone, email, or use our online contact form. No judgement, no pressure.">
+  <title>Contact Us | Debt Free Path</title>
+  <link rel="icon" type="image/png" href="images/DFP.png">
+  <link rel="apple-touch-icon" href="images/DFP.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" style="padding:0;background:none;">
+          <img src="images/DFP.png" alt="Debt Free Path" style="height:40px;width:auto;object-fit:contain;display:block;">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-dropdown">
+            <a href="#" class="nav-dropdown-toggle">Services <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-left:2px;margin-bottom:-1px;"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <div class="nav-dropdown-menu">
+              <a href="services/iva.html">IVA</a>
+              <a href="services/debt-management-plan.html">Debt Management Plan</a>
+              <a href="services/bankruptcy.html">Bankruptcy</a>
+              <a href="services/debt-relief-order.html">Debt Relief Order</a>
+              <a href="services/protected-trust-deed.html">Protected Trust Deed</a>
+              <a href="services/sequestration.html">Sequestration</a>
+            </div>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary nav-cta">Get Free Help</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <span class="mobile-menu-section">Services</span>
+    <a href="services/iva.html" class="mobile-menu-sub">IVA</a>
+    <a href="services/debt-management-plan.html" class="mobile-menu-sub">Debt Management Plan</a>
+    <a href="services/bankruptcy.html" class="mobile-menu-sub">Bankruptcy</a>
+    <a href="services/debt-relief-order.html" class="mobile-menu-sub">Debt Relief Order</a>
+    <a href="services/protected-trust-deed.html" class="mobile-menu-sub">Protected Trust Deed</a>
+    <a href="services/sequestration.html" class="mobile-menu-sub">Sequestration</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Get Free Help</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero-split">
+    <img src="images/contact-us.jpeg" alt="Debt Free Path Contact" class="page-hero-bg-img" onerror="this.style.display='none'">
+    <div class="page-hero-overlay"></div>
+    <div class="container" style="position:relative;z-index:2;">
+      <h1>Contact Us — Get Free<br>Debt Advice Today</h1>
+      <p>Struggling with debt? You're not alone — and help is just one step away. Millions of people across the UK face debt challenges every year. Whether you're dealing with credit card debt, personal loans, council tax arrears, or simply feeling overwhelmed by your finances, our friendly team at Debt Free Path is here to listen — with zero judgement and zero pressure. Reach out today and take your first step towards a debt-free life.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="fade-in">
+          <div class="contact-form-wrap">
+            <h3>Get in Touch — Free, Confidential Debt Help</h3>
+            <p>Fill in the form below and one of our specialist debt advisors will be in touch to discuss your situation in complete confidence. There's no obligation, no hard sell — just honest, straightforward advice.</p>
+            <form id="contactForm" novalidate>
+              <!-- ⚙️  WEB3FORMS SETUP (takes 1 minute — free, no account needed):
+                   1. Go to https://web3forms.com
+                   2. Enter your email: advisor@debtfreepath.co.uk
+                   3. They email you a free Access Key
+                   4. Paste that key below, replacing YOUR_ACCESS_KEY_HERE -->
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+              <input type="hidden" name="subject" value="New Debt Enquiry — Debt Free Path Website">
+              <input type="hidden" name="from_name" value="Debt Free Path Website">
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. John Smith" required>
+                <p class="field-error">Please enter your full name.</p>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                  <p class="field-error">Please enter a valid email address.</p>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number (optional)</label>
+                  <input type="tel" id="phone" name="phone" placeholder="e.g. 07700 900123">
+                  <p class="field-error">Please enter a valid phone number.</p>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="debtAmount">Total Debt Amount (approximate) *</label>
+                  <select id="debtAmount" name="debtAmount" required>
+                    <option value="">— Please select —</option>
+                    <option value="under-5k">Under £5,000</option>
+                    <option value="5k-10k">£5,000 – £10,000</option>
+                    <option value="10k-20k">£10,000 – £20,000</option>
+                    <option value="20k-50k">£20,000 – £50,000</option>
+                    <option value="over-50k">Over £50,000</option>
+                  </select>
+                  <p class="field-error">Please select your approximate debt amount.</p>
+                </div>
+                <div class="form-group">
+                  <label for="contactPref">How Would You Prefer We Contact You? *</label>
+                  <select id="contactPref" name="contactPref" required>
+                    <option value="">— Please select —</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone Call</option>
+                    <option value="whatsapp">WhatsApp</option>
+                  </select>
+                  <p class="field-error">Please select your preferred contact method.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Tell Us a Bit About Your Situation (optional)</label>
+                <textarea id="message" name="message" placeholder="Don't worry about the details — just give us a brief overview and your adviser will take it from there…"></textarea>
+                <p class="field-error">Please write a brief message.</p>
+              </div>
+              <div class="form-group" style="margin-bottom:8px;">
+                <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400;font-size:0.83rem;color:var(--gray-600);">
+                  <input type="checkbox" id="consent" name="consent" required style="width:auto;padding:0;margin-top:3px;accent-color:var(--blue-primary);">
+                  By submitting this form, you agree to be contacted by our team regarding debt solutions. We respect your privacy and will never share your data with third parties without your consent.</a>.
+                </label>
+                <p class="field-error" style="margin-top:5px;">You must agree to be contacted.</p>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:8px;">
+                Get My Free Debt Assessment
+                <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.5;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info Side -->
+        <div class="contact-info-side fade-in fade-in-delay-2">
+
+          <div class="contact-info-box">
+            <h4>Why UK People Trust Debt Free Path</h4>
+            <div class="cib-item">
+              <div class="cib-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="cib-text">
+                <strong>Free Initial Consultation</strong>
+                <span>No fees to speak to our advisors — ever.</span>
+              </div>
+            </div>
+            <div class="cib-item">
+              <div class="cib-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="cib-text">
+                <strong>Confidential &amp; Non-Judgemental</strong>
+                <span>Your privacy is our priority. We never judge.</span>
+              </div>
+            </div>
+            <div class="cib-item">
+              <div class="cib-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="cib-text">
+                <strong>UK-Based Advisors</strong>
+                <span>We understand the UK debt landscape inside out.</span>
+              </div>
+            </div>
+            <div class="cib-item">
+              <div class="cib-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="cib-text">
+                <strong>Regulated &amp; Compliant</strong>
+                <span>We work only within UK financial regulations and guidelines.</span>
+              </div>
+            </div>
+            <div class="cib-item">
+              <div class="cib-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="cib-text">
+                <strong>Tailored Solutions</strong>
+                <span>No one-size-fits-all approach — your plan is built around you.</span>
+              </div>
+            </div>
+            <div class="cib-item">
+              <div class="cib-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="cib-text">
+                <strong>Thousands Helped Across the UK</strong>
+                <span>From London to Glasgow, we've helped real people get back on track.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-box">
+            <h4>Speak to Us Directly</h4>
+            <p style="font-size:0.85rem;color:var(--gray-600);margin-bottom:16px;">Prefer to talk? We understand — sometimes it's easier to speak to a real person.</p>
+            <div class="cib-item">
+              <div class="cib-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+              <div class="cib-text">
+                <strong>+44 7446461601</strong>
+                <span>Free, confidential call — UK debt specialists</span>
+              </div>
+            </div>
+            <div class="cib-item">
+              <div class="cib-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div class="cib-text">
+                <strong><a href="mailto:advisor@debtfreepath.co.uk">advisor@debtfreepath.co.uk</a></strong>
+                <span>We reply within one working day</span>
+              </div>
+            </div>
+            <div class="cib-item">
+              <div class="cib-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="cib-text">
+                <strong>Mon–Fri: 8am – 8pm &nbsp;|&nbsp; Sat: 9am – 5pm</strong>
+                <span>Sunday and bank holidays: Closed</span>
+              </div>
+            </div>
+            <div style="margin-top:16px;padding:14px;background:var(--green-light);border-radius:var(--radius-sm);display:flex;align-items:center;gap:10px;">
+              <span style="width:8px;height:8px;background:var(--green);border-radius:50%;flex-shrink:0;"></span>
+              <p style="font-size:0.82rem;color:#065f46;font-weight:500;line-height:1.5;">Lines are currently <strong>open</strong>. Average wait time: under 2 minutes.</p>
+            </div>
+          </div>
+
+          <div class="contact-info-box" style="background:var(--blue-pale);border:1px solid var(--blue-mid);">
+            <h4 style="color:var(--navy);">All Calls Are Free &amp; Confidential</h4>
+            <p style="font-size:0.85rem;color:var(--gray-600);line-height:1.65;margin-bottom:14px;">Every call is handled by trained UK debt specialists. We cover England, Wales, Scotland, and Northern Ireland — no matter where you are, help is available.</p>
+            <a href="tel:+447446461601" class="btn btn-primary" style="width:100%;justify-content:center;">Call Now: +44 7446461601</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="map-section section-pad-sm">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">What Our Clients Say</span>
+        <h2 class="section-title">Real People. Real Results.</h2>
+        <p class="section-subtitle">From Manchester to Glasgow, here's what our clients say about working with Debt Free Path.</p>
+      </div>
+      <div class="map-placeholder fade-in" style="background:none;border:none;box-shadow:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;padding:0;text-align:left;align-items:start;">
+        <div style="background:var(--surface,#f8f9fb);border:1px solid var(--border,#e8eaf0);border-radius:16px;padding:28px;">
+          <p style="font-size:0.95rem;color:var(--gray-600);line-height:1.75;margin-bottom:18px;">"I was terrified to ask for help, but the team at Debt Free Path made everything so simple. I'm now on a DMP and sleeping properly for the first time in years."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#667eea,#764ba2);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.9rem;">S</div>
+            <div>
+              <strong style="display:block;font-size:0.9rem;">Sarah T.</strong>
+              <span style="font-size:0.8rem;color:var(--gray-400);">Manchester</span>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--surface,#f8f9fb);border:1px solid var(--border,#e8eaf0);border-radius:16px;padding:28px;">
+          <p style="font-size:0.95rem;color:var(--gray-600);line-height:1.75;margin-bottom:18px;">"They explained my IVA options clearly and without any pressure. I finally understood what I was getting into. I wish I'd called sooner."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#43e97b,#38f9d7);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.9rem;">J</div>
+            <div>
+              <strong style="display:block;font-size:0.9rem;">James R.</strong>
+              <span style="font-size:0.8rem;color:var(--gray-400);">Birmingham</span>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--surface,#f8f9fb);border:1px solid var(--border,#e8eaf0);border-radius:16px;padding:28px;">
+          <p style="font-size:0.95rem;color:var(--gray-600);line-height:1.75;margin-bottom:18px;">"Friendly, professional, and genuinely helpful. I'd recommend Debt Free Path to anyone struggling with debt in the UK. They really do care."</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#fa709a,#fee140);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.9rem;">K</div>
+            <div>
+              <strong style="display:block;font-size:0.9rem;">Karen M.</strong>
+              <span style="font-size:0.8rem;color:var(--gray-400);">Leeds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ MINI SECTION -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="text-center fade-in" style="margin-bottom:48px;">
+        <span class="section-label">Quick Answers</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Answers to the questions our team hears most often when people first get in touch.</p>
+      </div>
+      <div style="max-width:740px;margin:0 auto;" class="fade-in">
+        <div class="faq-list">
+          <div class="faq-item open">
+            <div class="faq-question">
+              Will contacting you affect my credit score?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>No. Simply reaching out for advice will not affect your credit score in any way. A credit search will only occur if and when you choose to proceed with a specific formal debt solution through one of our regulated partners.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Is your advice really free?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>Yes. Your initial consultation and debt assessment are completely free of charge with no obligation. We will always tell you clearly and upfront if any charges apply to a specific solution before you decide anything.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Am I eligible for an IVA or DMP?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>Eligibility depends on your individual circumstances — including your income, debt level, and the type of debts you hold. Our advisors will assess your full situation and recommend the most suitable option for you. There's no obligation to proceed with anything.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              How quickly can I get help?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>Once you submit your enquiry, a specialist will typically be in touch within 24 hours on business days. If you need help urgently, please call us directly on +44 7446461601 and we'll do our best to assist you straight away.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              What areas of the UK do you cover?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>We help clients across England, Wales, Scotland, and Northern Ireland. Some debt solutions — such as Protected Trust Deed and Sequestration — are specific to Scotland and governed by Scottish law. Our advisers will guide you to the right option for your location.</p></div>
+          </div>
+        </div>
+        <div style="margin-top:40px;padding:24px;background:var(--surface,#f8f9fb);border:1px solid var(--border,#e8eaf0);border-radius:12px;font-size:0.84rem;color:var(--gray-600);line-height:1.7;">
+          <strong style="display:block;margin-bottom:8px;color:var(--navy,#1a2340);">Important Information</strong>
+          Debt Free Path provides debt solution referral and advisory services to UK residents. We are committed to following all guidelines set out by the Financial Conduct Authority (FCA) and relevant UK legislation. An IVA is a formal insolvency solution — it may affect your credit rating and is recorded on the Insolvency Register. A DMP is an informal solution and your creditors are not legally bound by it. We recommend you carefully consider all options before proceeding with any debt solution.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="fade-in text-center">
+        <span class="section-label">Don't Wait</span>
+        <h2 class="section-title" style="color:white;margin-top:8px;">The Sooner You Start, the Sooner You're Free</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.7);margin:14px auto 0;max-width:480px;">Every day without a plan costs more in interest and stress. One conversation today could change your financial future.</p>
+        <div class="final-cta-actions">
+          <a href="tel:+447446461601" class="btn btn-white btn-lg">Call Us Now</a>
+          <a href="contact.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:black;">View All Solutions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFICE / TEAM BANNER IMAGE SLOT -->
+  <section class="section-pad-sm" style="background:var(--gray-50);">
+    <div class="container">
+      <div style="border-radius:var(--radius-xl);overflow:hidden;position:relative;height:300px;background:linear-gradient(135deg,var(--blue-pale) 0%,var(--blue-mid) 100%);display:flex;align-items:center;justify-content:center;border:1px solid var(--blue-mid);">
+        <!-- ===== OFFICE / TEAM PHOTO SLOT =====
+             Place a photo in 'images/' folder and update src.
+             e.g. src="images/office.jpg" or src="images/team-photo.jpg" -->
+        <img src="images/office.jpg" alt="Debt Free Path Office" onerror="this.style.display='none'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        <div style="position:relative;z-index:1;text-align:center;padding:0 24px;">
+          <svg viewBox="0 0 64 64" style="width:64px;height:64px;stroke:var(--blue-primary);fill:none;stroke-width:1.5;display:block;margin:0 auto 16px;opacity:0.5;"><rect x="8" y="24" width="48" height="32" rx="4"/><path d="M20 24V16a12 12 0 0124 0v8"/><circle cx="32" cy="40" r="4"/></svg>
+          <p style="color:var(--gray-500);font-size:0.9rem;font-weight:500;">Add your office or team photo here<br><code style="font-size:0.78rem;background:rgba(37,99,235,0.08);padding:2px 8px;border-radius:4px;color:var(--blue-primary);">images/office.jpg</code></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/DFP white text logo.png" alt="Debt Free Path" style="height:52px;width:auto;object-fit:contain;border-radius:8px;">
+          </div>
+          <p class="footer-desc">Helping people across England, Wales and Scotland understand their options and find a clear route to becoming debt free — since 2015.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61574310233208" class="social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="https://www.instagram.com/debtfreepath_?igsh=d2pkeXJrODNiYXB0" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+            <a href="https://www.tiktok.com/@debtfreepath_1" class="social-link" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.94a8.2 8.2 0 004.79 1.53V7a4.85 4.85 0 01-1.02-.31z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services/iva.html">IVA</a>
+            <a href="services/debt-management-plan.html">Debt Management Plan</a>
+            <a href="services/bankruptcy.html">Bankruptcy</a>
+            <a href="services/debt-relief-order.html">Debt Relief Order</a>
+            <a href="services/protected-trust-deed.html">Protected Trust Deed</a>
+            <a href="services/sequestration.html">Sequestration</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-info">
+            <div class="fci-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+44 7446461601</div>
+            <div class="fci-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:advisor@debtfreepath.co.uk">advisor@debtfreepath.co.uk</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2015 Debt Free Path. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- THANK YOU MODAL -->
+  <div class="modal-overlay" id="thankYouModal">
+    <div class="modal-box">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>Enquiry Received!</h3>
+      <p>Thank you for getting in touch. One of our specialist debt advisors will review your enquiry and respond within <strong>one working day</strong>. You're in safe hands.</p>
+      <p style="font-size:0.82rem;color:var(--gray-400);margin-bottom:28px;">Prefer to talk now? Call us free on <strong style="color:var(--blue-primary);">+44 7446461601</strong></p>
+      <button id="modalCloseBtn" class="btn btn-primary modal-close-btn btn-lg" style="width:100%;justify-content:center;">Close</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Debt Free Path — Professional debt relief advice, loan guidance, and financial recovery support. Take control of your finances and start your journey to becoming debt-free today.">
+  <meta name="keywords" content="debt relief, debt management, financial advice, loan guidance, debt consolidation, budget planning">
+  <title>Debt Free Path</title>
+  <link rel="icon" type="image/png" href="images/DFP.png">
+  <link rel="apple-touch-icon" href="images/DFP.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" style="padding:0;background:none;">
+          <img src="images/DFP.png" alt="Debt Free Path" style="height:40px;width:auto;object-fit:contain;display:block;">
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li class="nav-dropdown">
+            <a href="#" class="nav-dropdown-toggle">Services <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-left:2px;margin-bottom:-1px;"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <div class="nav-dropdown-menu">
+              <a href="services/iva.html">IVA</a>
+              <a href="services/debt-management-plan.html">Debt Management Plan</a>
+              <a href="services/bankruptcy.html">Bankruptcy</a>
+              <a href="services/debt-relief-order.html">Debt Relief Order</a>
+              <a href="services/protected-trust-deed.html">Protected Trust Deed</a>
+              <a href="services/sequestration.html">Sequestration</a>
+            </div>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary nav-cta">Get Free Help</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <span class="mobile-menu-section">Services</span>
+    <a href="services/iva.html" class="mobile-menu-sub">IVA</a>
+    <a href="services/debt-management-plan.html" class="mobile-menu-sub">Debt Management Plan</a>
+    <a href="services/bankruptcy.html" class="mobile-menu-sub">Bankruptcy</a>
+    <a href="services/debt-relief-order.html" class="mobile-menu-sub">Debt Relief Order</a>
+    <a href="services/protected-trust-deed.html" class="mobile-menu-sub">Protected Trust Deed</a>
+    <a href="services/sequestration.html" class="mobile-menu-sub">Sequestration</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary"> Get Free Help</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge"><span></span> Trusted by 50,000+ people across the UK</div>
+          <h1>Free Debt Help That <span class="highlight">Actually Works</span></h1>
+          <p class="hero-text">We give you clear, honest advice on how to deal with your debts — and help you find a way forward that fits your income and your life. No judgment. No pressure. Just real support from qualified advisers who are on your side.</p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary btn-lg">See Your Debt Options</a>
+            <a href="contact.html" class="btn btn-white btn-lg">Talk to an Adviser Free</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <div class="stat-num"><span data-count="20" data-suffix="K+">0</span></div>
+              <div class="stat-label">People Helped</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">£<span data-count="50" data-suffix="M+">0</span></div>
+              <div class="stat-label">Debt Resolved</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num"><span data-count="99" data-suffix="%">0</span></div>
+              <div class="stat-label">Satisfaction Rate</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-img-frame">
+            <img src="images/image-debt-free-path.jpeg" alt="Debt Free Path Advisor" class="hero-person-img" onerror="this.style.display='none'">
+            <div class="hero-img-hint">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/></svg>
+              <p>Add your advisor photo here<br><code>images/hero-advisor.jpg</code></p>
+            </div>
+          </div>
+          <div class="hero-card-main">
+            <h3>Your Debt Recovery Dashboard</h3>
+            <div class="progress-list">
+              <div class="progress-item">
+                <div class="progress-label"><span>Credit Card Debt</span><span>£4,200</span></div>
+                <div class="progress-bar-track"><div class="progress-bar-fill fill-blue" data-width="68" style="width:0%"></div></div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-label"><span>Personal Loan</span><span>£2,800</span></div>
+                <div class="progress-bar-track"><div class="progress-bar-fill fill-amber" data-width="45" style="width:0%"></div></div>
+              </div>
+              <div class="progress-item">
+                <div class="progress-label"><span>Savings Goal</span><span>£1,200</span></div>
+                <div class="progress-bar-track"><div class="progress-bar-fill fill-green" data-width="82" style="width:0%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-floating-card card-1">
+            <div class="hfc-icon green">✓</div>
+            <div class="hfc-text">
+              <p>Debt Cleared</p>
+              <strong>£12,400 saved</strong>
+            </div>
+          </div>
+          <div class="hero-floating-card card-2">
+            <div class="hfc-icon blue">📊</div>
+            <br>
+            <div class="hfc-text">
+              <p>Monthly saving</p>
+              <strong>£340 / month</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-bar-inner">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          FCA Regulated Advice
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Free Initial Consultation
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          20,000+ Clients Helped
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          No Hidden Fees
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Mon–Fri : 8am – 8pm Support
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section-pad" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-block">
+          <div class="about-img-placeholder">
+            <img src="images/DFP.png" alt="Debt Free Path" class="about-real-img" style="object-fit:contain;object-position:center;padding:48px;background:#fff;border-radius:var(--radius-xl);" onerror="this.style.display='none'">
+            <div class="about-img-inner">
+              <svg viewBox="0 0 120 120"><circle cx="60" cy="40" r="22"/><path d="M20 100c0-22 18-40 40-40s40 18 40 40"/></svg>
+            </div>
+          </div>
+          <!-- Stat cards sit on .about-image-block (position:relative, no overflow:hidden) so they won't be clipped -->
+          <div class="about-stat-card card-a">
+            <div class="num">2015</div>
+            <div class="lbl">Founded</div>
+          </div>
+          <div class="about-stat-card card-b">
+            <div class="num">★ 4.9</div>
+            <div class="lbl">Trustpilot Rating</div>
+          </div>
+        </div>
+        <div class="about-content fade-in">
+          <span class="section-label">Who We Are</span>
+          <h2 class="section-title">We're Here to Help — Not to Judge</h2>
+          <p class="section-subtitle">Debt can affect anyone. It doesn't matter how it started — a job loss, a relationship breakdown, rising bills, or simply borrowing a little too much over time. What matters is getting the right help before things get harder. Since 2015, we've helped more than 20,000 people across the UK find a way out of debt. Our advisers take time to understand your full situation before recommending anything — no script, no hard sell, and no pressure. Everything we do is free at the point of contact, and every adviser is fully qualified.</p>
+          <div class="mission-vision">
+            <div class="mv-card">
+              <h4>Our Mission</h4>
+              <p>To give everyone in the UK access to free, honest debt advice — and to make the path to becoming debt-free as clear and straightforward as possible.</p>
+            </div>
+            <div class="mv-card">
+              <h4>Our Vision</h4>
+              <p>A UK where no one has to face financial difficulty alone. Where the right help is always within reach, and where debt is something that can be resolved — not something you simply have to live with.</p>
+            </div>
+          </div>
+          <div class="trust-points">
+            <div class="trust-point">
+              <div class="trust-point-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="trust-point-text">
+                <strong>Your Information Stays Private</strong>
+                <span>Everything you share with us is treated with complete confidentiality. We will never share your details without your permission.</span>
+              </div>
+            </div>
+            <div class="trust-point">
+              <div class="trust-point-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="trust-point-text">
+                <strong>Free Advice, No Strings</strong>
+                <span>Our guidance is free from the first call. We will always tell you clearly and upfront if any charges apply to a specific solution before you decide anything.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services section-pad" id="services">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">How We Can Help</span>
+        <h2 class="section-title">Debt Solutions and Support for Every Situation</h2>
+        <p class="section-subtitle">There's no single answer that works for everyone in debt. What works for you depends on how much you owe, what you earn, and what your life looks like right now. Our advisers cover every option — and they'll help you find the one that fits.</p>
+      </div>
+      <div class="services-grid">
+        <div class="solution-card fade-in fade-in-delay-1">
+          <div class="solution-card-header">
+            <div class="sc-icon blue"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <span class="sc-badge popular">Most Common</span>
+          </div>
+          <h3>Individual Voluntary Arrangement</h3>
+          <p>An IVA is a legally binding agreement between you and your creditors, supervised by a licensed Insolvency Practitioner. You make one affordable monthly payment — typically over 5 years — and any remaining debt is legally written off at the end.</p>
+          <div class="solution-features">
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Typically write off 25–80% of unsecured debt</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Suitable for debts of £7,000+ owed to 2+ creditors</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Creditors cannot chase you once IVA is approved</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Stays on your credit file for 6 years</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> You may keep your home (with conditions)</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Must be set up by a licensed Insolvency Practitioner</div>
+          </div>
+          <a href="services/iva.html" class="btn btn-primary">Check IVA Eligibility</a>
+        </div>
+        <div class="solution-card fade-in fade-in-delay-2">
+          <div class="solution-card-header">
+            <div class="sc-icon green"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <span class="sc-badge new">Free Option</span>
+          </div>
+          <h3>Debt Management Plan</h3>
+          <p><em>DMP — Available UK-Wide</em><br>A DMP is an informal arrangement where you make one reduced monthly payment to a debt management company, which distributes funds to your creditors. It's not legally binding, but most creditors cooperate and may freeze interest and charges.</p>
+          <div class="solution-features">
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> No minimum debt level — suitable for any amount</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Interest and charges often frozen by creditors</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> No legal process — flexible and can be stopped</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Can be arranged through free charities (StepChange, NABS)</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Does not write off debt — you repay in full over time</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Appears on credit file while active</div>
+          </div>
+          <a href="services/debt-management-plan.html" class="btn btn-primary">See if DMP Suits You</a>
+        </div>
+        <div class="solution-card fade-in fade-in-delay-3">
+          <div class="solution-card-header">
+            <div class="sc-icon amber"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          </div>
+          <h3>Bankruptcy</h3>
+          <p><em>England, Wales &amp; Northern Ireland</em><br>Bankruptcy is a formal insolvency process suitable for people who cannot repay their debts and have few assets. Most debts are written off after typically 12 months. It is not the end — many people rebuild financially within a few years.</p>
+          <div class="solution-features">
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Court process — application fee of £680 applies</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Debts generally discharged after 12 months</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Restrictions on certain jobs and directorships</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Assets (including property equity) may be sold</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Remains on credit file for 6 years</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Not suitable if you own a home with equity</div>
+          </div>
+          <a href="services/bankruptcy.html" class="btn btn-primary">Learn About Bankruptcy</a>
+        </div>
+        <div class="solution-card fade-in fade-in-delay-1">
+          <div class="solution-card-header">
+            <div class="sc-icon blue"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          </div>
+          <h3>Debt Relief Order</h3>
+          <p><em>DRO — England, Wales &amp; Northern Ireland</em><br>A DRO is a low-cost formal insolvency option for people with low income, minimal assets, and debts under a set threshold. After 12 months, qualifying debts are written off. It must be applied for through an authorised debt adviser — you cannot apply directly.</p>
+          <div class="solution-features">
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Application fee: £90 (paid through an approved intermediary)</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Debt threshold: currently up to £30,000</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Suitable if you have little or no spare income</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cannot own a vehicle worth more than £2,000</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Debts written off after 12 months if circumstances don't change</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Available only via approved intermediary organisations</div>
+          </div>
+          <a href="services/debt-relief-order.html" class="btn btn-primary">Check DRO Eligibility</a>
+        </div>
+        <div class="solution-card fade-in fade-in-delay-2">
+          <div class="solution-card-header">
+            <div class="sc-icon green"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          </div>
+          <h3>Protected Trust Deed</h3>
+          <p><em>PTD — Scotland Only</em><br>A Protected Trust Deed is Scotland's equivalent to an IVA. A trustee manages the process, you make reduced monthly payments for typically 4 years, and remaining unsecured debts are written off. Creditors are legally prevented from taking further action.</p>
+          <div class="solution-features">
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Available only to Scottish residents</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Typically lasts 4 years (shorter than an IVA)</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Debts over £5,000 to at least two creditors</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Legal protection from creditor action once protected</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Trustee manages your estate during the process</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Stays on Accountant in Bankruptcy register</div>
+          </div>
+          <a href="services/protected-trust-deed.html" class="btn btn-primary">Explore Trust Deed Options</a>
+        </div>
+        <div class="solution-card fade-in fade-in-delay-3">
+          <div class="solution-card-header">
+            <div class="sc-icon amber"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          </div>
+          <h3>Sequestration</h3>
+          <p><em>Scottish Bankruptcy — Scotland Only</em><br>Sequestration is the Scottish equivalent of bankruptcy. It is a formal legal process that can write off most unsecured debts. There are several routes, including the Minimal Assets Process (MAP) if you have low income and few assets.</p>
+          <div class="solution-features">
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Available to Scottish residents only</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Minimal Assets Process (MAP) — low cost option for low income</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Full sequestration discharge typically after 12 months</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Administered by the Accountant in Bankruptcy (AiB)</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Restrictions apply during the process</div>
+            <div class="sf-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Most unsecured debts written off on discharge</div>
+          </div>
+          <a href="services/sequestration.html" class="btn btn-primary">Learn About Sequestration</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how-it-works section-pad" id="how-it-works">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">Getting Started</span>
+        <h2 class="section-title">What Happens When You Contact Us</h2>
+        <p class="section-subtitle">Getting started is simpler than you might think. Here's what the process looks like from your first call to your final payment.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card fade-in fade-in-delay-1">
+          <div class="step-num step-num-active">1</div>
+          <h3>Tell Us About Your Situation</h3>
+          <p>Get in touch in whatever way suits you — phone, online, or chat. One of our advisers will ask you some straightforward questions about your debts, your income, and your outgoings. There's nothing to prepare. Just talk to us honestly and we'll take it from there.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-2">
+          <div class="step-num">2</div>
+          <h3>We'll Show You Your Options</h3>
+          <p>Once we have a clear picture of your situation, your adviser will explain every option available to you in plain English — what each one means, how it works, and what the pros and cons are. No jargon. No pressure to choose anything on the spot.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-3">
+          <div class="step-num">3</div>
+          <h3>We'll Build a Plan Together</h3>
+          <p>When you've chosen the right path forward, we'll put together a personalised plan built around what you can afford. If your solution involves working with your creditors directly, we'll handle that side of things for you.</p>
+        </div>
+        <div class="step-card fade-in fade-in-delay-4">
+          <div class="step-num">4</div>
+          <h3>We'll Support You All the Way Through</h3>
+          <p>We stay with you from the first conversation to the last payment. If anything changes along the way — your income, your outgoings, your circumstances — we'll adjust your plan to keep things on track.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS SECTION ===== -->
+  <section class="benefits section-pad">
+    <div class="container">
+      <div class="benefits-inner">
+        <div class="benefits-left fade-in">
+          <span class="section-label">Why Get Help Now</span>
+          <h2 class="section-title">The Sooner You Act, the Easier It Gets</h2>
+          <p class="section-subtitle">Debt rarely gets easier on its own. Interest builds up, missed payments pile up, and the stress of it all can affect your health, your relationships, and your ability to work. Getting advice early — before things reach a crisis point — makes every part of the process simpler.</p>
+          <div class="benefits-grid">
+            <div class="benefit-item">
+              <div class="benefit-item-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+              <h4>The Stress Starts to Lift</h4>
+              <p>Most people tell us they feel better after their very first call — even before anything has been formally agreed. Having a clear plan removes a lot of the anxiety that comes with uncertainty.</p>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-item-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <h4>You Stop Fire-Fighting Your Finances</h4>
+              <p>Instead of managing multiple payments, multiple due dates, and multiple creditors, you'll have one clear plan to follow. That simplicity makes a real difference.</p>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-item-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+              <h4>You Learn Skills That Last</h4>
+              <p>The budgeting and money management skills you develop through this process don't disappear when your debts are paid. Our clients leave better equipped to handle their finances than when they started.</p>
+            </div>
+            <div class="benefit-item">
+              <div class="benefit-item-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+              <h4>You Get Your Confidence Back</h4>
+              <p>Understanding your finances — really understanding them — changes how you feel about money. Fear and avoidance get replaced by clarity and control. That shift is one of the most powerful parts of the whole process.</p>
+            </div>
+          </div>
+        </div>
+        <div class="benefits-visual fade-in fade-in-delay-2">
+          <h3>See How It Works in Real Life</h3>
+          <div class="timeline-item">
+            <div class="timeline-dot d1">1</div>
+            <div class="timeline-body">
+              <p class="t-label">Day 1</p>
+              <h4>First Contact</h4>
+              <p class="t-desc">Mark got in touch after months of ignoring letters from creditors. He had £14,000 spread across three credit cards and hadn't been able to meet minimum payments for two months. He felt embarrassed and didn't know where to start.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot d2">2</div>
+            <div class="timeline-body">
+              <p class="t-label">Week 1</p>
+              <h4>Advice &amp; Plan Created</h4>
+              <p class="t-desc">After a free, confidential call, Mark's full financial picture was reviewed. A personalised repayment plan was agreed — one single monthly payment he could comfortably afford, with creditor interest frozen across all three accounts.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot d3">3</div>
+            <div class="timeline-body">
+              <p class="t-label">Month 6</p>
+              <h4>Progress Milestone</h4>
+              <p class="t-desc">£3,200 cleared. All interest frozen. Mark described his situation as "completely transformed" — the constant stress of unopened letters and missed payments had gone.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot d4">4</div>
+            <div class="timeline-body">
+              <p class="t-label">Month 36</p>
+              <h4>Debt Free! 🎉</h4>
+              <p class="t-desc">Final payment made. £14,000 cleared in full. Mark is now putting £400 a month into savings — something he couldn't have imagined when he first picked up the phone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEBT CALCULATOR -->
+  <section class="calculator-section section-pad" id="calculator">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">Free Check</span>
+        <h2 class="section-title">Free Debt Repayment Checker</h2>
+        <p class="section-subtitle">Enter your details below to see an estimate of how long it will take to clear your debt and how much you'll pay in total — then speak to an adviser about solutions that could do better.</p>
+      </div>
+      <div class="calc-wrapper fade-in">
+        <div class="calc-header">
+          <h3>Estimate Your Repayment Timeline</h3>
+          <p>This is an estimate only. Contact us for a personalised, detailed plan.</p>
+        </div>
+        <div class="calc-body">
+          <div class="calc-inputs">
+            <form id="calcForm">
+              <div class="calc-field">
+                <label for="totalDebt">Total Debt Amount (£)</label>
+                <input type="number" id="totalDebt" placeholder="e.g. 8500" min="1" step="1" required>
+              </div>
+              <div class="calc-field">
+                <label for="interestRate">Annual Interest Rate (%)</label>
+                <input type="number" id="interestRate" placeholder="e.g. 18.9" min="0" step="0.1" required>
+              </div>
+              <div class="calc-field">
+                <label for="monthlyPayment">Monthly Payment (£)</label>
+                <input type="number" id="monthlyPayment" placeholder="e.g. 250" min="1" step="1" required>
+              </div>
+              <p id="calcError" style="color:var(--red);font-size:0.82rem;display:none;margin-top:-8px;"></p>
+              <br>
+              <button type="submit" class="btn btn-primary btn-lg calc-btn">Calculate Now</button>
+            </form>
+          </div>
+          <div class="calc-results" style="display:none;flex-direction:column;gap:18px;" id="calcResults">
+            <div class="calc-result-card">
+              <p>Estimated Time to Debt-Free</p>
+              <strong id="resultMonths">—</strong>
+              <span>Based on your current payment amount</span>
+            </div>
+            <div class="calc-result-card green-border">
+              <p>Total Amount You'll Pay</p>
+              <strong id="resultTotal">—</strong>
+              <span>Including principal and interest</span>
+            </div>
+            <div class="calc-result-card amber-border">
+              <p>Total Interest Paid</p>
+              <strong id="resultInterest">—</strong>
+              <span>A formal debt solution could reduce or write off this</span>
+            </div>
+            <a href="contact.html" class="btn btn-green">Get a Better Plan — Free</a>
+          </div>
+          <div class="calc-placeholder" id="calcPlaceholder">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <p>Enter your details and click<br><strong>Calculate Now</strong> to see your results</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ SECTION ===== -->
+  <section class="faq section-pad" id="faq">
+    <div class="container">
+      <div class="text-center fade-in">
+        <span class="section-label">Frequently Asked Questions</span>
+        <h2 class="section-title">Answers to the Most Common Debt Questions</h2>
+        <p class="section-subtitle">Find answers to the questions we hear most often about debt relief, loans, and financial recovery.</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-list fade-in">
+          <div class="faq-item open">
+            <div class="faq-question">
+              What is a Debt Management Plan?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>A Debt Management Plan — or DMP — is an informal arrangement where you make one affordable monthly payment to a debt adviser, who then shares it between your creditors. It's not a formal legal solution, which means it's flexible and can be adjusted if your circumstances change. Many creditors agree to freeze interest and charges as part of a DMP, which can reduce the total amount you repay significantly.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Will getting debt advice affect my credit score?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>Entering into a formal debt solution will usually be noted on your credit file. But for most people who are already missing payments or carrying high balances, the short-term impact is far outweighed by the benefit of becoming debt-free. Your adviser will always explain what any solution means for your credit file before you agree to anything.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Is it really free?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>Yes. Our initial advice and guidance are completely free. We will always explain clearly — before you make any decision — whether any charges apply to a specific solution. You will never be surprised by hidden costs.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I know which debt solution is right for me?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>There's no shortcut here — it genuinely depends on your full situation. Your total debt, your income, your assets, and your long-term goals all play a role. Our advisers take time to understand all of this before making any recommendation. We'll always explain our reasoning clearly so you can make an informed decision.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              How long does it take to pay off my debts?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>It depends on how much you owe and how much you can afford to repay each month. A Debt Management Plan typically runs for three to seven years. Other formal solutions have fixed timelines. Whatever your path looks like, your adviser will give you a realistic estimate from the outset — so you always know what you're working toward.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              What if I can't make a payment one month?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>Contact us as soon as possible. Our advisers can review your plan and adjust it to reflect a change in your circumstances. Missing a payment doesn't have to derail your plan — but the sooner you let us know, the more we can do to help.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Can you help if I'm self-employed?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>Yes. We regularly support self-employed people, contractors, and those on variable or irregular incomes. We know that a standard monthly budget doesn't always work for everyone — so we build plans that account for income that fluctuates. Being self-employed doesn't limit your options.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              What if I've already missed several payments?
+              <div class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+            </div>
+            <div class="faq-answer"><p>It's never too late to get help. We work with people at every stage of financial difficulty — from those who are just starting to struggle, to those who have already received county court judgements or been contacted by debt collectors. Whatever your situation, there are options available to you.</p></div>
+          </div>
+        </div>
+        <div class="faq-cta-box fade-in fade-in-delay-2">
+          <h3>Still have questions?</h3>
+          <p>Our friendly advisers are ready to help you navigate any aspect of your financial situation. Get in touch today — it's completely free and confidential.</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:20px;">Speak to an Adviser</a>
+          <div class="faq-contact-items">
+            <div class="faq-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +44 7446461601
+            </div>
+            <div class="faq-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:advisor@debtfreepath.co.uk">advisor@debtfreepath.co.uk</a>
+            </div>
+            <div class="faq-contact-item">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Mon–Fri: 8am – 8pm
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="fade-in">
+        <span class="section-label">Ready to Start? So Are We.</span>
+        <h2 class="section-title" style="color:white;margin-top:8px;">You Don't Need to Have Everything Figured Out</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,0.7);margin:14px auto 0;max-width:560px;">You don't need to know which solution you want, or have all your paperwork ready. All you need to do is get in touch — and we'll guide you through the rest. The first conversation is free, confidential, and without obligation. Most people say it was the best thing they did.</p>
+        <div class="final-cta-actions">
+          <a href="contact.html" class="btn btn-white btn-lg">See Your Debt Options</a>
+          <a href="contact.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:black;">Get Free Advice Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/DFP white text logo.png" alt="Debt Free Path" style="height:52px;width:auto;object-fit:contain;border-radius:8px;">
+          </div>
+          <p class="footer-desc">Helping people across England, Wales and Scotland understand their options and find a clear route to becoming debt free — since 2015.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61574310233208" class="social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="https://www.instagram.com/debtfreepath_?igsh=d2pkeXJrODNiYXB0" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+            <a href="https://www.tiktok.com/@debtfreepath_1" class="social-link" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.94a8.2 8.2 0 004.79 1.53V7a4.85 4.85 0 01-1.02-.31z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services/iva.html">IVA</a>
+            <a href="services/debt-management-plan.html">Debt Management Plan</a>
+            <a href="services/bankruptcy.html">Bankruptcy</a>
+            <a href="services/debt-relief-order.html">Debt Relief Order</a>
+            <a href="services/protected-trust-deed.html">Protected Trust Deed</a>
+            <a href="services/sequestration.html">Sequestration</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-info">
+            <div class="fci-item"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.92a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>+44 7446461601</div>
+            <div class="fci-item"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:advisor@debtfreepath.co.uk">advisor@debtfreepath.co.uk</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2015 Debt Free Path. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
