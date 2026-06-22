@@ -235,7 +235,19 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 }
 .mobile-menu a:hover { color: var(--blue-primary); }
 .mobile-menu a:last-child { border-bottom: none; }
-.mobile-menu .btn { width: 100%; justify-content: center; margin-top: 12px; }
+.mobile-menu .btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 16px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: none !important;
+  border-radius: var(--radius-md);
+}
 
 /* NAV DROPDOWN */
 .nav-dropdown { position: relative; }
@@ -318,6 +330,21 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   width: 400px; height: 400px;
   background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%);
   pointer-events: none;
+}
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(15,35,64,0.93) 0%, rgba(30,58,95,0.88) 50%, rgba(26,74,122,0.82) 100%);
+  z-index: 1;
 }
 .hero-inner {
   display: grid;
@@ -990,16 +1017,25 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 }
 
 /* ============================================
-   SERVICES PAGE — Split Hero with background image
+   SERVICES / ABOUT PAGE — Split Hero with background image
    ============================================ */
-.page-hero-split { overflow: hidden; }
+.page-hero-split {
+  overflow: hidden;
+  min-height: 420px;
+  padding: 140px 0 72px;
+}
+/* Policy pages — smaller hero */
+.page-hero-split.page-hero-sm {
+  min-height: 260px;
+  padding: 130px 0 56px;
+}
 .page-hero-bg-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center right;
+  object-position: center center;
   z-index: 0;
 }
 .page-hero-overlay {
@@ -1007,10 +1043,10 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(15,35,64,0.97) 0%,
-    rgba(15,35,64,0.97) 42%,
-    rgba(15,35,64,0.55) 68%,
-    rgba(15,35,64,0.12) 100%
+    rgba(15,35,64,0.96) 0%,
+    rgba(15,35,64,0.92) 38%,
+    rgba(15,35,64,0.55) 65%,
+    rgba(15,35,64,0.15) 100%
   );
   z-index: 1;
 }
@@ -1643,6 +1679,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   .calc-body { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
   .mission-vision { grid-template-columns: 1fr; }
+  .page-hero-split { min-height: 360px; padding: 130px 0 64px; }
 }
 
 /* ============================================
@@ -1692,6 +1729,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   .roadmap-tag { font-size: 0.68rem; margin-top: 8px; }
   /* Contact page testimonials: prevent height overflow */
   .map-placeholder { height: auto !important; }
+  .page-hero-split { min-height: 300px; padding: 110px 0 52px; }
 }
 
 /* ============================================
@@ -1890,7 +1928,8 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 }
 @media (max-width: 640px) {
   .team-grid { grid-template-columns: 1fr; }
-  .about-img-placeholder { height: 240px; }
+  .about-img-placeholder { height: 320px; }
+  .about-real-img { padding: 0 !important; object-fit: cover !important; }
 }
 
 /* ============================================
