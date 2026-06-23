@@ -70,51 +70,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  /* ---- Scroll Animations ---- */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  /* ---- Show all fade-in elements instantly ---- */
+  document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  /* ---- Progress Bars (instant) ---- */
+  document.querySelectorAll('.progress-bar-fill[data-width]').forEach(bar => {
+    bar.style.width = bar.getAttribute('data-width') + '%';
+  });
 
-  /* ---- Animated Progress Bars (Hero) ---- */
-  const progressBars = document.querySelectorAll('.progress-bar-fill[data-width]');
-  if (progressBars.length) {
-    setTimeout(() => {
-      progressBars.forEach(bar => {
-        bar.style.width = bar.getAttribute('data-width') + '%';
-      });
-    }, 600);
-  }
-
-  /* ---- Counter Animation ---- */
-  function animateCounter(el) {
+  /* ---- Counters (instant final value) ---- */
+  document.querySelectorAll('[data-count]').forEach(el => {
     const target = parseInt(el.getAttribute('data-count'));
     const suffix = el.getAttribute('data-suffix') || '';
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-    const timer = setInterval(() => {
-      current = Math.min(current + step, target);
-      el.textContent = Math.floor(current).toLocaleString() + suffix;
-      if (current >= target) clearInterval(timer);
-    }, 16);
-  }
-
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-        entry.target.classList.add('counted');
-        animateCounter(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+    el.textContent = target.toLocaleString() + suffix;
+    el.classList.add('counted');
+  });
 
   /* ---- Debt Calculator ---- */
   const calcForm = document.getElementById('calcForm');
