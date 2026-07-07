@@ -1643,6 +1643,38 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .modal-box p { font-size: 0.9rem; color: var(--gray-500); line-height: 1.7; margin-bottom: 28px; }
 .modal-close-btn { width: 100%; }
 
+/* Lead Popup Form */
+.lead-popup-box {
+  max-width: 480px;
+  text-align: left;
+  padding: 40px 36px 36px;
+  position: relative;
+}
+.lead-popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--gray-100);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition);
+  flex-shrink: 0;
+}
+.lead-popup-close:hover { background: var(--gray-200); }
+.lead-popup-close svg { width: 16px; height: 16px; stroke: var(--gray-600); fill: none; stroke-width: 2.5; }
+.lead-popup-header { margin-bottom: 24px; }
+.lead-popup-header h3 { font-size: 1.35rem; font-weight: 800; color: var(--navy); margin: 8px 0 6px; letter-spacing: -0.02em; }
+.lead-popup-header p { font-size: 0.88rem; color: var(--gray-500); line-height: 1.6; margin: 0; }
+.lead-popup-box .form-group label { font-size: 0.82rem; }
+.lead-popup-box .form-group input,
+.lead-popup-box .form-group select { padding: 11px 14px; font-size: 0.9rem; }
+
 /* ============================================
    ANIMATIONS
    ============================================ */

@@ -307,6 +307,86 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  /* ---- Lead Popup Form (index.html only — shows after 5 seconds) ---- */
+  const leadPopup = document.getElementById('leadPopup');
+  const leadPopupClose = document.getElementById('leadPopupClose');
+  const leadPopupForm = document.getElementById('leadPopupForm');
+
+  if (leadPopup && !sessionStorage.getItem('dfp_popup_seen')) {
+    setTimeout(() => {
+      leadPopup.classList.add('open');
+      sessionStorage.setItem('dfp_popup_seen', '1');
+    }, 5000);
+  }
+
+  if (leadPopupClose) {
+    leadPopupClose.addEventListener('click', () => leadPopup.classList.remove('open'));
+  }
+  if (leadPopup) {
+    leadPopup.addEventListener('click', function(e) {
+      if (e.target === this) this.classList.remove('open');
+    });
+  }
+
+  if (leadPopupForm) {
+    leadPopupForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      let valid = true;
+
+      leadPopupForm.querySelectorAll('input[required], select[required]').forEach(field => {
+        const group = field.closest('.form-group');
+        const value = field.value.trim();
+        let fieldValid = true;
+
+        if (field.type === 'checkbox') {
+          fieldValid = field.checked;
+        } else if (field.type === 'email') {
+          fieldValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        } else if (field.type === 'tel') {
+          fieldValid = /^[\d\s\+\-\(\)]{7,15}$/.test(value);
+        } else {
+          fieldValid = value !== '';
+        }
+
+        if (group) {
+          group.classList.toggle('has-error', !fieldValid);
+        }
+        if (!fieldValid) valid = false;
+      });
+
+      if (!valid) return;
+
+      const submitBtn = document.getElementById('leadPopupSubmitBtn');
+      const originalHTML = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending… please wait';
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: new FormData(leadPopupForm),
+          headers: { 'Accept': 'application/json' }
+        });
+        const result = await response.json();
+
+        if (result.success) {
+          leadPopup.classList.remove('open');
+          const thankYouModal = document.getElementById('thankYouModal');
+          if (thankYouModal) thankYouModal.classList.add('open');
+          leadPopupForm.reset();
+          leadPopupForm.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
+        } else {
+          alert('Something went wrong. Please call us on +44 7446461601 or email advisor@debtfreepath.co.uk');
+        }
+      } catch (err) {
+        alert('Could not send your enquiry. Please call us on +44 7446461601.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalHTML;
+      }
+    });
+  }
+
   /* ---- Newsletter Form ---- */
   document.querySelectorAll('.newsletter-form').forEach(form => {
     form.addEventListener('submit', function(e) {
