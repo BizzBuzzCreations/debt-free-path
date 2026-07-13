@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta name="google-site-verification" content="FlUx9Dib5IvSMu14s24sMJzAdtnvPvQinJ6wP8TOpeo" />
+  <meta name="google-site-verification" content="H-AawQeZCHWQj9IpDkmQg2n6WbXPfzigmsNADqhoG6U" />
 </head>
 <body>
 
@@ -651,44 +651,46 @@
       <button class="lead-popup-close" id="leadPopupClose" aria-label="Close">
         <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
-      <div class="lead-popup-header">
-        <span class="section-label">Free Debt Assessment</span>
-        <h3>Get Free Debt Help Today</h3>
-        <p>Speak to a UK specialist in minutes — no judgement, no pressure, completely confidential.</p>
+      <div class="lead-popup-scroll">
+        <div class="lead-popup-header">
+          <span class="section-label">Free Debt Assessment</span>
+          <h3>Get Free Debt Help Today</h3>
+          <p>Speak to a UK specialist in minutes — no judgement, no pressure, completely confidential.</p>
+        </div>
+        <form id="leadPopupForm" novalidate>
+          <input type="hidden" name="access_key" value="e4b8620d-bdd9-4176-a6ae-e4fa6e1f34c7">
+          <input type="hidden" name="subject" value="New Lead — Debt Free Path Homepage Popup">
+          <input type="hidden" name="from_name" value="Debt Free Path Website">
+          <input type="hidden" name="redirect" value="false">
+          <input type="checkbox" name="botcheck" style="display:none;">
+          <div class="form-group">
+            <label for="popupName">Full Name *</label>
+            <input type="text" id="popupName" name="fullName" placeholder="e.g. John Smith" required>
+            <p class="field-error">Please enter your full name.</p>
+          </div>
+          <div class="form-group">
+            <label for="popupPhone">Mobile Number *</label>
+            <input type="tel" id="popupPhone" name="phone" placeholder="e.g. 07700 900123" required>
+            <p class="field-error">Please enter a valid mobile number.</p>
+          </div>
+          <div class="form-group">
+            <label for="popupEmail">Email Address *</label>
+            <input type="email" id="popupEmail" name="email" placeholder="john@example.com" required>
+            <p class="field-error">Please enter a valid email address.</p>
+          </div>
+          <div class="form-group" style="margin-bottom:8px;">
+            <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400;font-size:0.82rem;color:var(--gray-600);line-height:1.55;">
+              <input type="checkbox" id="popupConsent" name="consent" required style="width:auto;padding:0;margin-top:3px;flex-shrink:0;accent-color:var(--blue-primary);">
+              By submitting this form, you agree to be contacted by our team regarding debt solutions. We respect your privacy and will never share your data with third parties without your consent.
+            </label>
+            <p class="field-error" style="margin-top:5px;">You must agree to be contacted.</p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:12px;" id="leadPopupSubmitBtn">
+            Get My Free Assessment
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.5;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
       </div>
-      <form id="leadPopupForm" novalidate>
-        <input type="hidden" name="access_key" value="e4b8620d-bdd9-4176-a6ae-e4fa6e1f34c7">
-        <input type="hidden" name="subject" value="New Lead — Debt Free Path Homepage Popup">
-        <input type="hidden" name="from_name" value="Debt Free Path Website">
-        <input type="hidden" name="redirect" value="false">
-        <input type="checkbox" name="botcheck" style="display:none;">
-        <div class="form-group">
-          <label for="popupName">Full Name *</label>
-          <input type="text" id="popupName" name="fullName" placeholder="e.g. John Smith" required>
-          <p class="field-error">Please enter your full name.</p>
-        </div>
-        <div class="form-group">
-          <label for="popupPhone">Mobile Number *</label>
-          <input type="tel" id="popupPhone" name="phone" placeholder="e.g. 07700 900123" required>
-          <p class="field-error">Please enter a valid mobile number.</p>
-        </div>
-        <div class="form-group">
-          <label for="popupEmail">Email Address *</label>
-          <input type="email" id="popupEmail" name="email" placeholder="john@example.com" required>
-          <p class="field-error">Please enter a valid email address.</p>
-        </div>
-        <div class="form-group" style="margin-bottom:8px;">
-          <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;text-transform:none;letter-spacing:0;font-weight:400;font-size:0.82rem;color:var(--gray-600);line-height:1.55;">
-            <input type="checkbox" id="popupConsent" name="consent" required style="width:auto;padding:0;margin-top:3px;flex-shrink:0;accent-color:var(--blue-primary);">
-            By submitting this form, you agree to be contacted by our team regarding debt solutions. We respect your privacy and will never share your data with third parties without your consent.
-          </label>
-          <p class="field-error" style="margin-top:5px;">You must agree to be contacted.</p>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:12px;" id="leadPopupSubmitBtn">
-          Get My Free Assessment
-          <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.5;"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-      </form>
     </div>
   </div>
 
