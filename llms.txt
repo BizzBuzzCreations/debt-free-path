@@ -1,0 +1,30 @@
+# Debt Free Path
+
+> Debt Free Path is a UK-based debt advisory and referral service helping people across England, Wales and Scotland understand their options and find the right regulated debt solution. Advice is free, impartial, and judgement-free.
+
+Debt Free Path does not charge for advice and does not act as a lender. The site explains the main UK debt solutions in plain English (Debt Management Plans, IVAs, Debt Relief Orders, Bankruptcy, Protected Trust Deeds, and Sequestration), then refers visitors to FCA-regulated partners who can carry out a full, regulated assessment of their circumstances. Content is aimed at UK residents in problem debt and should not be treated as a substitute for regulated financial advice.
+
+Contact: advisor@debtfreepath.co.uk | +44 7446 461601
+
+## Company
+- [Home](https://debtfreepath.co.uk/): Overview of Debt Free Path, the debt solutions it covers, and how the referral service works.
+- [About Us](https://debtfreepath.co.uk/about.html): Who Debt Free Path is, its mission, and how it helps people in England, Wales and Scotland find the right debt solution.
+- [Contact Us](https://debtfreepath.co.uk/contact.html): How to reach a UK-based debt specialist by phone, email, or contact form.
+
+## Debt Solutions
+- [Debt Management Plan (DMP)](https://debtfreepath.co.uk/services/debt-management-plan.html): An informal arrangement to repay unsecured debt through one affordable monthly payment.
+- [Individual Voluntary Arrangement (IVA)](https://debtfreepath.co.uk/services/iva.html): A formal, legally binding agreement in England and Wales to repay debts over a fixed period, with eligibility, process, and risks explained.
+- [Debt Relief Order (DRO)](https://debtfreepath.co.uk/services/debt-relief-order.html): A low-cost option in England and Wales for people with low income and few assets, including eligibility and the 12-month moratorium.
+- [Bankruptcy](https://debtfreepath.co.uk/services/bankruptcy.html): How bankruptcy works in England and Wales, including the legal process, key risks, and asset implications.
+- [Protected Trust Deed](https://debtfreepath.co.uk/services/protected-trust-deed.html): Scotland's formal insolvency solution allowing affordable monthly payments with remaining debt written off at the end.
+- [Sequestration](https://debtfreepath.co.uk/services/sequestration.html): Scotland's equivalent of bankruptcy, providing a fresh start when debts cannot be repaid, managed by a Trustee.
+
+## Blog
+- [Blog Home](https://debtfreepath.co.uk/blogs.html): Free, plain-English debt advice guides and articles from the Debt Free Path team.
+- [How to Get Out of Debt in the UK (2026)](https://debtfreepath.co.uk/blogs/how-to-get-out-of-debt-uk-2026.html): A step-by-step guide to getting out of debt in the UK, covering DMPs, IVAs, and practical advice.
+
+## Legal
+- [Privacy Policy](https://debtfreepath.co.uk/privacy-policy.html): How Debt Free Path collects, uses, and protects personal data under UK GDPR and the Data Protection Act 2018.
+- [Cookie Policy](https://debtfreepath.co.uk/cookie-policy.html): How cookies and similar technologies are used on the site and how to manage preferences.
+- [Terms of Use](https://debtfreepath.co.uk/terms-of-use.html): The rules and conditions governing use of the Debt Free Path website and services.
+- [Disclaimer](https://debtfreepath.co.uk/disclaimer.html): Important information about the nature of the site's content and the limits of the service.

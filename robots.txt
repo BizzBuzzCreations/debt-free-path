@@ -1,0 +1,39 @@
+# robots.txt for https://debtfreepath.co.uk
+
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# Common AI assistant / LLM crawlers — explicitly allowed so answer
+# engines can read and cite Debt Free Path's debt advice content.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://debtfreepath.co.uk/sitemap.xml
