@@ -1,116 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- generator=https://www.primointeractive.com/google-sitemaps  |  crawled debtfreepath.co.uk in 6.22s -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://debtfreepath.co.uk/</loc>
-    <lastmod>2026-07-16</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/about.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/contact.html</loc>
-    <lastmod>2026-07-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/services/debt-management-plan.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/services/iva.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/services/debt-relief-order.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/services/bankruptcy.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/services/protected-trust-deed.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/services/sequestration.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/blogs.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://debtfreepath.co.uk/blogs/how-to-get-out-of-debt-uk-2026.html</loc>
-    <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://debtfreepath.co.uk/blogs/bnpl-uk-2026-new-rules-risks-guide.html</loc>
-    <lastmod>2026-07-20</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://debtfreepath.co.uk/services/iva</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://debtfreepath.co.uk/pages/privacy-policy.html</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://debtfreepath.co.uk/services/debt-management-plan</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://debtfreepath.co.uk/pages/cookie-policy.html</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://debtfreepath.co.uk/services/bankruptcy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://debtfreepath.co.uk/pages/disclaimer.html</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://debtfreepath.co.uk/services/debt-relief-order</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://debtfreepath.co.uk/pages/terms-of-use.html</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://debtfreepath.co.uk/services/protected-trust-deed</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/services/sequestration</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/about</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/blogs</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/contact</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/pages/privacy-policy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/pages/terms-of-use</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/pages/cookie-policy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/pages/disclaimer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/blogs/what-is-an-iva-uk</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/blogs/ai-money-management-tools-uk-2026</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/blogs/bnpl-uk-2026-new-rules-risks-guide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://debtfreepath.co.uk/blogs/how-to-get-out-of-debt-uk-2026</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
