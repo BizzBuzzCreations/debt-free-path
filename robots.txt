@@ -3,6 +3,7 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
+Disallow: /request-a-call-thankyou.html
 
 # Common AI assistant / LLM crawlers — explicitly allowed so answer
 # engines can read and cite Debt Free Path's debt advice content.
