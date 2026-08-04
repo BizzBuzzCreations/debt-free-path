@@ -212,6 +212,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  /* ---- CRM Website Intelligence Tracker — lead sync ---- */
+  function syncLeadToWit(form) {
+    const { visitorId, sessionId } = window.wit?.getIds() ?? {};
+    const data = new FormData(form);
+    fetch('/.netlify/functions/wit-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        visitorId,
+        sessionId,
+        contactPerson: data.get('fullName'),
+        email: data.get('email'),
+        phone: data.get('phone'),
+      }),
+    }).catch(() => {
+      // Best-effort CRM sync — must never block the enquiry confirmation above.
+    });
+  }
+
   /* ---- Contact Form — Validation + Email via Web3Forms ---- */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
@@ -233,6 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const result = await response.json();
 
         if (result.success) {
+          syncLeadToWit(contactForm);
           const modal = document.getElementById('thankYouModal');
           if (modal) modal.classList.add('open');
           contactForm.reset();
@@ -370,6 +390,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const result = await response.json();
 
         if (result.success) {
+          syncLeadToWit(leadPopupForm);
           leadPopup.classList.remove('open');
           const thankYouModal = document.getElementById('thankYouModal');
           if (thankYouModal) thankYouModal.classList.add('open');

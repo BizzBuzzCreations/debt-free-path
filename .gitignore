@@ -1,1 +1,25 @@
+# Tooling
 .serena
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Netlify local dev
+.netlify
+
+# Archives
+*.zip
