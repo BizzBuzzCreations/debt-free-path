@@ -231,6 +231,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  /* ---- Netlify Forms — mirror submission so it shows up in the Forms dashboard ---- */
+  function submitToNetlifyForms(form) {
+    const data = new FormData(form);
+    const encoded = new URLSearchParams(data).toString();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encoded,
+    }).catch(() => {
+      // Best-effort Netlify Forms sync — must never block the enquiry confirmation above.
+    });
+  }
+
   /* ---- Contact Form — Validation + Email via Web3Forms ---- */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
@@ -253,6 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (result.success) {
           syncLeadToWit(contactForm);
+          submitToNetlifyForms(contactForm);
           const modal = document.getElementById('thankYouModal');
           if (modal) modal.classList.add('open');
           contactForm.reset();
@@ -391,6 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (result.success) {
           syncLeadToWit(leadPopupForm);
+          submitToNetlifyForms(leadPopupForm);
           leadPopup.classList.remove('open');
           const thankYouModal = document.getElementById('thankYouModal');
           if (thankYouModal) thankYouModal.classList.add('open');
