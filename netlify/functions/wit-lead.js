@@ -8,7 +8,7 @@ exports.handler = async (event) => {
     return { statusCode: 400, body: JSON.stringify({ success: false, error: 'Invalid JSON body' }) };
   }
 
-  const { visitorId, sessionId, companyName, contactPerson, email, phone, dealValue } = payload;
+  const { visitorId, sessionId, companyName, contactPerson, email, phone, customFields } = payload;
 
   if (!contactPerson) {
     return {
@@ -24,14 +24,14 @@ exports.handler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         trackingId: process.env.CRM_WIT_TRACKING_ID,
-        apiSecret: process.env.CRM_LEAD_API_KEY,
+        apiSecret: process.env.CRM_WIT_SECRET,
         visitorId,
         sessionId,
         companyName: companyName || contactPerson || 'Website Lead',
         contactPerson,
         email,
         phone,
-        dealValue,
+        customFields,
       }),
     });
 

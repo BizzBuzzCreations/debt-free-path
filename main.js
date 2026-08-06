@@ -216,6 +216,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function createCrmLead(form) {
     const { visitorId, sessionId } = window.wit?.getIds() ?? {};
     const data = new FormData(form);
+    const contactPref = data.get('contactPref');
+    const message = data.get('message');
+    const debtAmount = data.get('debtAmount');
+
     fetch('/.netlify/functions/wit-lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -225,6 +229,13 @@ document.addEventListener('DOMContentLoaded', function() {
         contactPerson: data.get('fullName'),
         email: data.get('email'),
         phone: data.get('phone'),
+        customFields: {
+          ...(contactPref ? { contactPreference: contactPref } : {}),
+          ...(message ? { message } : {}),
+          // Raw bracket as selected (e.g. "20k-50k") — not a number, so it
+          // lives in customFields rather than the CRM's numeric dealValue field.
+          ...(debtAmount ? { debtValue: debtAmount } : {}),
+        },
       }),
     }).catch(() => {
       // Best-effort CRM sync — must never block the enquiry confirmation above.
