@@ -16,7 +16,6 @@ Thumbs.db
 # Environment / secrets
 .env
 .env.*
-!.env.example
 
 # Netlify local dev
 .netlify

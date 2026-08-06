@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   /* ---- CRM Website Intelligence Tracker — lead sync ---- */
-  function syncLeadToWit(form) {
+  function createCrmLead(form) {
     const { visitorId, sessionId } = window.wit?.getIds() ?? {};
     const data = new FormData(form);
     fetch('/.netlify/functions/wit-lead', {
@@ -231,20 +231,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* ---- Netlify Forms — mirror submission so it shows up in the Forms dashboard ---- */
+  /* ---- Netlify Forms — primary submission channel ---- */
   function submitToNetlifyForms(form) {
     const data = new FormData(form);
     const encoded = new URLSearchParams(data).toString();
-    fetch('/', {
+    return fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encoded,
-    }).catch(() => {
-      // Best-effort Netlify Forms sync — must never block the enquiry confirmation above.
     });
   }
 
-  /* ---- Contact Form — Validation + Email via Web3Forms ---- */
+  /* ---- Contact Form — Validation + Netlify Forms ---- */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
@@ -257,23 +255,14 @@ document.addEventListener('DOMContentLoaded', function() {
       submitBtn.innerHTML = 'Sending… please wait';
 
       try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: new FormData(contactForm),
-          headers: { 'Accept': 'application/json' }
-        });
-        const result = await response.json();
+        const response = await submitToNetlifyForms(contactForm);
+        if (!response.ok) throw new Error('Netlify Forms submission failed');
 
-        if (result.success) {
-          syncLeadToWit(contactForm);
-          submitToNetlifyForms(contactForm);
-          const modal = document.getElementById('thankYouModal');
-          if (modal) modal.classList.add('open');
-          contactForm.reset();
-          document.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
-        } else {
-          alert('Something went wrong. Please call us directly on +44 7446461601 or email advisor@debtfreepath.co.uk');
-        }
+        createCrmLead(contactForm);
+        const modal = document.getElementById('thankYouModal');
+        if (modal) modal.classList.add('open');
+        contactForm.reset();
+        document.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
       } catch (err) {
         alert('Could not send your enquiry. Please call us on +44 7446461601 or email advisor@debtfreepath.co.uk');
       } finally {
@@ -396,24 +385,15 @@ document.addEventListener('DOMContentLoaded', function() {
       submitBtn.innerHTML = 'Sending… please wait';
 
       try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: new FormData(leadPopupForm),
-          headers: { 'Accept': 'application/json' }
-        });
-        const result = await response.json();
+        const response = await submitToNetlifyForms(leadPopupForm);
+        if (!response.ok) throw new Error('Netlify Forms submission failed');
 
-        if (result.success) {
-          syncLeadToWit(leadPopupForm);
-          submitToNetlifyForms(leadPopupForm);
-          leadPopup.classList.remove('open');
-          const thankYouModal = document.getElementById('thankYouModal');
-          if (thankYouModal) thankYouModal.classList.add('open');
-          leadPopupForm.reset();
-          leadPopupForm.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
-        } else {
-          alert('Something went wrong. Please call us on +44 7446461601 or email advisor@debtfreepath.co.uk');
-        }
+        createCrmLead(leadPopupForm);
+        leadPopup.classList.remove('open');
+        const thankYouModal = document.getElementById('thankYouModal');
+        if (thankYouModal) thankYouModal.classList.add('open');
+        leadPopupForm.reset();
+        leadPopupForm.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
       } catch (err) {
         alert('Could not send your enquiry. Please call us on +44 7446461601.');
       } finally {

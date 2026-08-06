@@ -24,7 +24,7 @@ exports.handler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         trackingId: process.env.CRM_WIT_TRACKING_ID,
-        apiSecret: process.env.CRM_WIT_SECRET,
+        apiSecret: process.env.CRM_LEAD_API_KEY,
         visitorId,
         sessionId,
         companyName: companyName || contactPerson || 'Website Lead',
