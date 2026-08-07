@@ -1353,7 +1353,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   background: var(--white);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid var(--gray-100);
+  border: 1px solid #000;
   transition: all var(--transition);
 }
 .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
