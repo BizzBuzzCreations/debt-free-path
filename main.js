@@ -212,7 +212,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  /* ---- Contact Form — Validation + Email via Web3Forms ---- */
+  /* ---- CRM Website Intelligence Tracker — lead sync ---- */
+  function createCrmLead(form) {
+    const { visitorId, sessionId } = window.wit?.getIds() ?? {};
+    const data = new FormData(form);
+    const contactPref = data.get('contactPref');
+    const message = data.get('message');
+    const debtAmount = data.get('debtAmount');
+
+    fetch('/.netlify/functions/wit-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        visitorId,
+        sessionId,
+        contactPerson: data.get('fullName'),
+        email: data.get('email'),
+        phone: data.get('phone'),
+        customFields: {
+          ...(contactPref ? { contactPreference: contactPref } : {}),
+          ...(message ? { message } : {}),
+          // Raw bracket as selected (e.g. "20k-50k") — not a number, so it
+          // lives in customFields rather than the CRM's numeric dealValue field.
+          ...(debtAmount ? { debtValue: debtAmount } : {}),
+        },
+      }),
+    }).catch(() => {
+      // Best-effort CRM sync — must never block the enquiry confirmation above.
+    });
+  }
+
+  /* ---- Netlify Forms — primary submission channel ---- */
+  function submitToNetlifyForms(form) {
+    const data = new FormData(form);
+    const encoded = new URLSearchParams(data).toString();
+    return fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encoded,
+    });
+  }
+
+  /* ---- Contact Form — Validation + Netlify Forms ---- */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
@@ -225,21 +266,14 @@ document.addEventListener('DOMContentLoaded', function() {
       submitBtn.innerHTML = 'Sending… please wait';
 
       try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: new FormData(contactForm),
-          headers: { 'Accept': 'application/json' }
-        });
-        const result = await response.json();
+        const response = await submitToNetlifyForms(contactForm);
+        if (!response.ok) throw new Error('Netlify Forms submission failed');
 
-        if (result.success) {
-          const modal = document.getElementById('thankYouModal');
-          if (modal) modal.classList.add('open');
-          contactForm.reset();
-          document.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
-        } else {
-          alert('Something went wrong. Please call us directly on +44 7446461601 or email advisor@debtfreepath.co.uk');
-        }
+        createCrmLead(contactForm);
+        const modal = document.getElementById('thankYouModal');
+        if (modal) modal.classList.add('open');
+        contactForm.reset();
+        document.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
       } catch (err) {
         alert('Could not send your enquiry. Please call us on +44 7446461601 or email advisor@debtfreepath.co.uk');
       } finally {
@@ -362,22 +396,15 @@ document.addEventListener('DOMContentLoaded', function() {
       submitBtn.innerHTML = 'Sending… please wait';
 
       try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          body: new FormData(leadPopupForm),
-          headers: { 'Accept': 'application/json' }
-        });
-        const result = await response.json();
+        const response = await submitToNetlifyForms(leadPopupForm);
+        if (!response.ok) throw new Error('Netlify Forms submission failed');
 
-        if (result.success) {
-          leadPopup.classList.remove('open');
-          const thankYouModal = document.getElementById('thankYouModal');
-          if (thankYouModal) thankYouModal.classList.add('open');
-          leadPopupForm.reset();
-          leadPopupForm.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
-        } else {
-          alert('Something went wrong. Please call us on +44 7446461601 or email advisor@debtfreepath.co.uk');
-        }
+        createCrmLead(leadPopupForm);
+        leadPopup.classList.remove('open');
+        const thankYouModal = document.getElementById('thankYouModal');
+        if (thankYouModal) thankYouModal.classList.add('open');
+        leadPopupForm.reset();
+        leadPopupForm.querySelectorAll('.form-group').forEach(g => g.classList.remove('has-error'));
       } catch (err) {
         alert('Could not send your enquiry. Please call us on +44 7446461601.');
       } finally {
