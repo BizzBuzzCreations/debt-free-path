@@ -448,7 +448,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   gap: 12px;
 }
 .hero-floating-card.card-1 { top: -24px; right: -20px; }
-.hero-floating-card.card-2 { bottom: -20px; left: -20px; }
+.hero-floating-card.card-2 { bottom: -55px; left: -20px; }
 .hfc-icon {
   width: 40px; height: 40px;
   border-radius: 10px;
