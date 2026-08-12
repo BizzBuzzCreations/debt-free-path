@@ -976,6 +976,17 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
 
 /* ============================================
+   LEGAL DISCLAIMER STRIP (bottom of every page)
+   ============================================ */
+.legal-disclaimer { background: #08172b; border-top: 1px solid rgba(255,255,255,0.08); padding: 32px 0; }
+.legal-disclaimer .container { max-width: 980px; }
+.legal-disclaimer p { font-size: 0.78rem; line-height: 1.6; color: rgba(255,255,255,0.4); text-align: center; margin-bottom: 8px; }
+.legal-disclaimer p:last-child { margin-bottom: 0; }
+.legal-disclaimer a { color: var(--amber); font-weight: 600; text-decoration: none; }
+.legal-disclaimer a:hover { text-decoration: underline; }
+@media (max-width: 640px) { .legal-disclaimer { padding: 24px 0; } .legal-disclaimer p { font-size: 0.75rem; line-height: 1.5; } }
+
+/* ============================================
    PAGE HERO (inner pages)
    ============================================ */
 .page-hero {
