@@ -982,6 +982,17 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
 
 /* ============================================
+   LEGAL DISCLAIMER STRIP (bottom of every page)
+   ============================================ */
+.legal-disclaimer { background: #08172b; border-top: 1px solid rgba(255,255,255,0.08); padding: 32px 0; }
+.legal-disclaimer .container { max-width: 980px; }
+.legal-disclaimer p { font-size: 0.78rem; line-height: 1.6; color: rgba(255,255,255,0.4); text-align: center; margin-bottom: 8px; }
+.legal-disclaimer p:last-child { margin-bottom: 0; }
+.legal-disclaimer a { color: var(--amber); font-weight: 600; text-decoration: none; }
+.legal-disclaimer a:hover { text-decoration: underline; }
+@media (max-width: 640px) { .legal-disclaimer { padding: 24px 0; } .legal-disclaimer p { font-size: 0.75rem; line-height: 1.5; } }
+
+/* ============================================
    PAGE HERO (inner pages)
    ============================================ */
 .page-hero {
@@ -1687,6 +1698,13 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .modal-box h3 { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; letter-spacing: -0.02em; }
 .modal-box p { font-size: 0.9rem; color: var(--gray-500); line-height: 1.7; margin-bottom: 28px; }
 .modal-close-btn { width: 100%; }
+
+/* Thank You Page */
+.thankyou-section { min-height: 70vh; display: flex; align-items: center; }
+.thankyou-container { text-align: center; max-width: 640px; }
+.thankyou-lead { font-size: 1.05rem; color: var(--gray-400); margin: 20px 0 8px; }
+.thankyou-sub { font-size: 0.9rem; color: var(--gray-400); margin-bottom: 32px; }
+.thankyou-sub .phone-highlight { color: var(--blue-primary); }
 
 /* Lead Popup Form */
 .lead-popup-box {
