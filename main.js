@@ -237,9 +237,17 @@ document.addEventListener('DOMContentLoaded', function() {
   async function submitLead(form) {
     if (form.querySelector('input[name="access_key"]')) {
       const response = await submitToWeb3Forms(form);
-      const result = await response.json();
-      if (!response.ok || !result.success) {
-        throw new Error(result.message || 'Web3Forms submission failed');
+      if (!response.ok) throw new Error('Web3Forms submission failed');
+
+      // Web3Forms normally replies with JSON when called via fetch, but on some
+      // requests it falls back to its own HTML "submitted" page instead — that's
+      // still a successful delivery, so only fail on an explicit success:false.
+      const contentType = response.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        const result = await response.json();
+        if (result.success === false) {
+          throw new Error(result.message || 'Web3Forms submission failed');
+        }
       }
     } else {
       const response = await submitToNetlifyForms(form);
