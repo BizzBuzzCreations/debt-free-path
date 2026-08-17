@@ -132,7 +132,6 @@
     ]
   }
   </script>
-  <script src="https://crm.bizzbuzzcreations.com/wit.js" data-tracking-id="wit_92224e5ddb4a5064b5677653" async></script>
 </head>
 <body>
 
@@ -140,13 +139,13 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <div class="nav-inner">
-        <a href="../index.html" class="nav-logo" style="padding:0;background:none;">
-          <img src="../images/DFP.png" alt="Debt Free Path" style="height:40px;width:auto;object-fit:contain;display:block;">
+        <a href="../index.html" class="nav-logo nav-logo-reset">
+          <img src="../images/DFP.png" alt="Debt Free Path" class="nav-logo-img">
         </a>
         <ul class="nav-links">
           <li><a href="../index.html">Home</a></li>
           <li class="nav-dropdown">
-            <a href="#" class="nav-dropdown-toggle">Services <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-left:2px;margin-bottom:-1px;"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <a href="#" class="nav-dropdown-toggle">Services <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><polyline points="6 9 12 15 18 9"/></svg></a>
             <div class="nav-dropdown-menu">
               <a href="../services/iva.html">IVA</a>
               <a href="../services/debt-management-plan.html">Debt Management Plan</a>
@@ -161,7 +160,7 @@
           <li><a href="../contact.html">Contact</a></li>
         </ul>
         <a href="../contact.html" class="btn btn-primary nav-cta">Get Free Help</a>
-        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
@@ -231,8 +230,8 @@
               </ul>
             </div>
 
-            <div class="article-featured-img" style="height:300px;margin:0 0 36px;">
-              <img src="../blog-image/iva-hero-debt-freedom 1.jpg" alt="Person feeling relief after finding a clear path to becoming debt free" style="object-fit:cover;" onerror="this.parentElement.style.display='none'">
+            <div class="article-featured-img article-featured-img--inline is-first">
+              <img src="../blog-image/iva-hero-debt-freedom 1.jpg" alt="Person feeling relief after finding a clear path to becoming debt free" onerror="this.parentElement.style.display='none'">
             </div>
 
             <h2 id="what-is-iva">What Does IVA Actually Mean?</h2>
@@ -262,8 +261,8 @@
             </ol>
             <p>Throughout this period, interest and charges on the included debts are typically frozen, and creditors can't take further legal action against you for those debts. This is one of the main reasons people consider an IVA over simply trying to manage debts informally.</p>
 
-            <div class="article-featured-img" style="height:300px;margin:8px 0 36px;">
-              <img src="../blog-image/iva-process-steps 1.jpg" alt="Step-by-step overview of how the IVA process works" style="object-fit:cover;" onerror="this.parentElement.style.display='none'">
+            <div class="article-featured-img article-featured-img--inline">
+              <img src="../blog-image/iva-process-steps 1.jpg" alt="Step-by-step overview of how the IVA process works" onerror="this.parentElement.style.display='none'">
             </div>
 
             <h2 id="iva-vs-options">IVA vs Other Debt Solutions</h2>
@@ -288,8 +287,8 @@
             </div>
             <p>The official <a href="https://www.gov.uk/individual-voluntary-arrangements-ivas" target="_blank" rel="noopener">gov.uk page on individual voluntary arrangements</a> outlines the formal eligibility rules and what happens if you miss a payment, which is worth a read if you want the legal detail straight from the source.</p>
 
-            <div class="article-featured-img" style="height:300px;margin:8px 0 36px;">
-              <img src="../blog-image/iva-vs-debt-options 1.jpg" alt="Comparing an IVA against other UK debt solutions" style="object-fit:cover;" onerror="this.parentElement.style.display='none'">
+            <div class="article-featured-img article-featured-img--inline">
+              <img src="../blog-image/iva-vs-debt-options 1.jpg" alt="Comparing an IVA against other UK debt solutions" onerror="this.parentElement.style.display='none'">
             </div>
 
             <h2 id="pros-cons">The Pros and Cons of an IVA</h2>
@@ -384,9 +383,13 @@
           <div class="blog-contact-card">
             <h4>Get Free Debt Advice</h4>
             <p>Tell us a little about your situation and a specialist adviser will get back to you — free and confidential.</p>
-            <form id="contactForm" name="contact" data-netlify="true" data-wit-form="contact-form" netlify-honeypot="botcheck" novalidate>
+            <form id="contactForm" name="contact" data-netlify="true" netlify-honeypot="botcheck" novalidate>
               <input type="hidden" name="form-name" value="contact">
-              <input type="checkbox" name="botcheck" style="display:none;">
+              <input type="hidden" name="access_key" value="e4b8620d-bdd9-4176-a6ae-e4fa6e1f34c7">
+              <input type="hidden" name="subject" value="New Enquiry — Blog Contact Form">
+              <input type="hidden" name="from_name" value="Debt Free Path Website">
+              <input type="hidden" name="redirect" value="false">
+              <input type="checkbox" name="botcheck" class="honeypot-field" aria-label="Leave this field blank" tabindex="-1" autocomplete="off">
               <div class="form-group">
                 <label for="blogName">Name *</label>
                 <input type="text" id="blogName" name="fullName" placeholder="Your full name" required>
@@ -426,7 +429,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="../images/DFP white text logo.png" alt="Debt Free Path" style="height:52px;width:auto;object-fit:contain;border-radius:8px;">
+            <img src="../images/DFP white text logo.png" alt="Debt Free Path" class="footer-logo-img">
           </div>
           <p class="footer-desc">Helping people across England, Wales and Scotland understand their options and find a clear route to becoming debt free — since 2015.</p>
           <div class="social-links">
@@ -495,8 +498,8 @@
       </div>
       <h3>Enquiry Received!</h3>
       <p>Thank you for getting in touch. One of our specialist debt advisors will review your enquiry and respond within <strong>one working day</strong>. You're in safe hands.</p>
-      <p style="font-size:0.82rem;color:var(--gray-400);margin-bottom:28px;">Prefer to talk now? Call us free on <strong style="color:var(--blue-primary);">+44 7446461601</strong></p>
-      <button id="modalCloseBtn" class="btn btn-primary modal-close-btn btn-lg" style="width:100%;justify-content:center;">Close</button>
+      <p class="modal-note">Prefer to talk now? Call us free on <strong class="phone-highlight">+44 7446461601</strong></p>
+      <button type="button" id="modalCloseBtn" class="btn btn-primary modal-close-btn btn-lg">Close</button>
     </div>
   </div>
 

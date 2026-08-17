@@ -212,37 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  /* ---- CRM Website Intelligence Tracker — lead sync ---- */
-  function createCrmLead(form) {
-    const { visitorId, sessionId } = window.wit?.getIds() ?? {};
-    const data = new FormData(form);
-    const contactPref = data.get('contactPref');
-    const message = data.get('message');
-    const debtAmount = data.get('debtAmount');
-
-    fetch('/.netlify/functions/wit-lead', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        visitorId,
-        sessionId,
-        contactPerson: data.get('fullName'),
-        email: data.get('email'),
-        phone: data.get('phone'),
-        customFields: {
-          ...(contactPref ? { contactPreference: contactPref } : {}),
-          ...(message ? { message } : {}),
-          // Raw bracket as selected (e.g. "20k-50k") — not a number, so it
-          // lives in customFields rather than the CRM's numeric dealValue field.
-          ...(debtAmount ? { debtValue: debtAmount } : {}),
-        },
-      }),
-    }).catch(() => {
-      // Best-effort CRM sync — must never block the enquiry confirmation above.
-    });
-  }
-
-  /* ---- Netlify Forms — primary submission channel ---- */
+  /* ---- Netlify Forms — fallback for any form without a Web3Forms access_key ---- */
   function submitToNetlifyForms(form) {
     const data = new FormData(form);
     const encoded = new URLSearchParams(data).toString();
@@ -253,7 +223,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  /* ---- Contact Form — Validation + Netlify Forms ---- */
+  /* ---- Web3Forms — used by forms carrying a hidden access_key field ---- */
+  function submitToWeb3Forms(form) {
+    const data = new FormData(form);
+    return fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: data,
+    });
+  }
+
+  /* ---- Submit a lead form via Web3Forms (preferred) or Netlify Forms (fallback) ---- */
+  async function submitLead(form) {
+    if (form.querySelector('input[name="access_key"]')) {
+      const response = await submitToWeb3Forms(form);
+      const result = await response.json();
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Web3Forms submission failed');
+      }
+    } else {
+      const response = await submitToNetlifyForms(form);
+      if (!response.ok) throw new Error('Netlify Forms submission failed');
+    }
+  }
+
+  /* ---- Contact Form — Validation + Netlify Forms / Web3Forms ---- */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', async function(e) {
@@ -266,10 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
       submitBtn.innerHTML = 'Sending… please wait';
 
       try {
-        const response = await submitToNetlifyForms(contactForm);
-        if (!response.ok) throw new Error('Netlify Forms submission failed');
+        await submitLead(contactForm);
 
-        createCrmLead(contactForm);
         const modal = document.getElementById('thankYouModal');
         if (modal) modal.classList.add('open');
         contactForm.reset();
@@ -396,10 +388,8 @@ document.addEventListener('DOMContentLoaded', function() {
       submitBtn.innerHTML = 'Sending… please wait';
 
       try {
-        const response = await submitToNetlifyForms(leadPopupForm);
-        if (!response.ok) throw new Error('Netlify Forms submission failed');
+        await submitLead(leadPopupForm);
 
-        createCrmLead(leadPopupForm);
         leadPopup.classList.remove('open');
         const thankYouModal = document.getElementById('thankYouModal');
         if (thankYouModal) thankYouModal.classList.add('open');

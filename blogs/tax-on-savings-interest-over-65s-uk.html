@@ -94,7 +94,6 @@
     ]
   }
   </script>
-  <script src="https://crm.bizzbuzzcreations.com/wit.js" data-tracking-id="wit_92224e5ddb4a5064b5677653" async></script>
 </head>
 <body>
 
@@ -102,13 +101,13 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <div class="nav-inner">
-        <a href="../index.html" class="nav-logo" style="padding:0;background:none;">
-          <img src="../images/DFP.png" alt="Debt Free Path" style="height:40px;width:auto;object-fit:contain;display:block;">
+        <a href="../index.html" class="nav-logo nav-logo-reset">
+          <img src="../images/DFP.png" alt="Debt Free Path" class="nav-logo-img">
         </a>
         <ul class="nav-links">
           <li><a href="../index.html">Home</a></li>
           <li class="nav-dropdown">
-            <a href="#" class="nav-dropdown-toggle">Services <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-left:2px;margin-bottom:-1px;"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <a href="#" class="nav-dropdown-toggle">Services <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" class="nav-dropdown-icon"><polyline points="6 9 12 15 18 9"/></svg></a>
             <div class="nav-dropdown-menu">
               <a href="../services/iva.html">IVA</a>
               <a href="../services/debt-management-plan.html">Debt Management Plan</a>
@@ -123,7 +122,7 @@
           <li><a href="../contact.html">Contact</a></li>
         </ul>
         <a href="../contact.html" class="btn btn-primary nav-cta">Get Free Help</a>
-        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+        <button type="button" class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
@@ -434,7 +433,7 @@
               <input type="hidden" name="subject" value="New Enquiry — Blog: Tax on Savings Interest for Over-65s">
               <input type="hidden" name="from_name" value="Debt Free Path Website">
               <input type="hidden" name="redirect" value="false">
-              <input type="checkbox" name="botcheck" style="display:none;">
+              <input type="checkbox" name="botcheck" class="honeypot-field" aria-label="Leave this field blank" tabindex="-1" autocomplete="off">
               <div class="form-group">
                 <label for="blogName">Name *</label>
                 <input type="text" id="blogName" name="fullName" placeholder="Your full name" required>
@@ -474,7 +473,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="../images/DFP white text logo.png" alt="Debt Free Path" style="height:52px;width:auto;object-fit:contain;border-radius:8px;">
+            <img src="../images/DFP white text logo.png" alt="Debt Free Path" class="footer-logo-img">
           </div>
           <p class="footer-desc">Helping people across England, Wales and Scotland understand their options and find a clear route to becoming debt free — since 2015.</p>
           <div class="social-links">
@@ -543,8 +542,8 @@
       </div>
       <h3>Enquiry Received!</h3>
       <p>Thank you for getting in touch. One of our specialist debt advisors will review your enquiry and respond within <strong>one working day</strong>. You're in safe hands.</p>
-      <p style="font-size:0.82rem;color:var(--gray-400);margin-bottom:28px;">Prefer to talk now? Call us free on <strong style="color:var(--blue-primary);">+44 7446461601</strong></p>
-      <button id="modalCloseBtn" class="btn btn-primary modal-close-btn btn-lg" style="width:100%;justify-content:center;">Close</button>
+      <p class="modal-note">Prefer to talk now? Call us free on <strong class="phone-highlight">+44 7446461601</strong></p>
+      <button type="button" id="modalCloseBtn" class="btn btn-primary modal-close-btn btn-lg">Close</button>
     </div>
   </div>
 

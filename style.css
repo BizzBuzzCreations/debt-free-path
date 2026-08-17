@@ -801,6 +801,19 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   align-items: start;
 }
 .faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-mini-intro { margin-bottom: 48px; }
+.faq-mini-wrap { max-width: 740px; margin: 0 auto; }
+.faq-legal-note {
+  margin-top: 40px;
+  padding: 24px;
+  background: var(--surface, #f8f9fb);
+  border: 1px solid var(--border, #e8eaf0);
+  border-radius: 12px;
+  font-size: 0.84rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+.faq-legal-note strong { display: block; margin-bottom: 8px; color: var(--navy); }
 .faq-item {
   background: var(--white);
   border: 1px solid var(--gray-200);
@@ -1553,6 +1566,8 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 }
 .contact-form-wrap h3 { font-size: 1.3rem; font-weight: 800; color: var(--navy); margin-bottom: 8px; letter-spacing: -0.02em; }
 .contact-form-wrap > p { font-size: 0.87rem; color: var(--gray-500); margin-bottom: 32px; }
+.contact-form-wrap button[type="submit"] { width: 100%; justify-content: center; margin-top: 8px; }
+.contact-form-wrap button[type="submit"] svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.5; }
 
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .form-group { margin-bottom: 20px; }
@@ -1617,6 +1632,10 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   border: 1px solid var(--gray-100);
 }
 .contact-info-box h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 18px; }
+.contact-info-box--highlight { background: var(--blue-pale); border: 1px solid var(--blue-mid); }
+.contact-info-box--highlight .btn-primary { width: 100%; justify-content: center; }
+.cib-intro { font-size: 0.85rem; color: var(--gray-600); margin-bottom: 16px; }
+.cib-note { font-size: 0.85rem; color: var(--gray-600); line-height: 1.65; margin-bottom: 14px; }
 .cib-item {
   display: flex;
   gap: 14px;
@@ -1634,6 +1653,17 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .cib-icon svg { width: 18px; height: 18px; stroke: var(--blue-primary); fill: none; stroke-width: 2; }
 .cib-text strong { font-size: 0.88rem; font-weight: 700; color: var(--gray-800); display: block; }
 .cib-text span { font-size: 0.83rem; color: var(--gray-500); }
+.availability-banner {
+  margin-top: 16px;
+  padding: 14px;
+  background: var(--green-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.availability-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; flex-shrink: 0; }
+.availability-banner p { font-size: 0.82rem; color: #065f46; font-weight: 500; line-height: 1.5; }
 
 .hours-list { display: flex; flex-direction: column; gap: 10px; }
 .hours-item { display: flex; justify-content: space-between; font-size: 0.85rem; }
@@ -1697,7 +1727,8 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .modal-icon svg { width: 36px; height: 36px; stroke: var(--green); fill: none; stroke-width: 2.5; }
 .modal-box h3 { font-size: 1.5rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; letter-spacing: -0.02em; }
 .modal-box p { font-size: 0.9rem; color: var(--gray-500); line-height: 1.7; margin-bottom: 28px; }
-.modal-close-btn { width: 100%; }
+.modal-box .modal-note { font-size: 0.82rem; color: var(--gray-400); }
+.modal-close-btn { width: 100%; justify-content: center; }
 
 /* Thank You Page */
 .thankyou-section { min-height: 70vh; display: flex; align-items: center; }
@@ -2219,6 +2250,8 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   height: 380px;
 }
 .article-featured-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.article-featured-img--inline { height: 300px; margin: 8px 0 36px; }
+.article-featured-img--inline.is-first { margin-top: 0; }
 
 .article-content h2 {
   font-size: 1.45rem; font-weight: 800; color: var(--navy);
