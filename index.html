@@ -1540,5 +1540,21 @@
     </div>
 
     <script src="main.js"></script>
+
+    <!-- Blog Client Integration -->
+    <script src="https://blog-dashboard-one-tau.vercel.app/integration/blog-client.js"></script>
+    <script>
+      BlogClient.configure({
+        baseUrl: "https://blog-dashboard-one-tau.vercel.app",
+        websiteId: "6a85aa4329990ab637007b66",
+        siteKey: "site_6658d98c6f802772b86b13736546e513",
+      });
+
+      BlogClient.getBlogs({ page: 1, limit: 10 }).then(function (res) {
+        if (res.success) {
+          console.log(res.data, res.pagination);
+        }
+      });
+    </script>
   </body>
 </html>
