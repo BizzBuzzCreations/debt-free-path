@@ -2312,6 +2312,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 .article-callout p { margin: 0; font-size: 0.92rem; color: var(--navy); }
 .article-callout p strong { color: var(--navy); }
 
+.article-sources { font-size: 0.82rem; color: var(--gray-400); }
 .article-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 40px 0 0; }
 .article-tag {
   font-size: 0.76rem; font-weight: 600; color: var(--blue-primary);
